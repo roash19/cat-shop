@@ -1,10 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ProductItem from "./components/ProductItem";
 
 function App() {
   return (
     <div className="App">
-      App
+      <ProductItem />
     </div>
   );
 }
