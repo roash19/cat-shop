@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import cn from "classnames";
-import ProductItem from "./components/CatProductItem";
+import CatProductItem from "./components/CatProductItem";
 
 const CLASS = "app";
 
@@ -13,7 +13,7 @@ const App = () => {
 
         <div className={cn(`${CLASS}__products`)}>
           <div className={cn(`${CLASS}__product-item`)}>
-            <ProductItem
+            <CatProductItem
               weight="0,5"
               taste="с фуа-гра"
               composition="Головы щучьи с чесноком да свежайшая сёмгушка."
@@ -22,7 +22,7 @@ const App = () => {
             />
           </div>
           <div className={cn(`${CLASS}__product-item`)}>
-            <ProductItem
+            <CatProductItem
               weight="2"
               taste="с рыбой"
               composition="Головы щучьи с чесноком да свежайшая сёмгушка."
@@ -31,7 +31,7 @@ const App = () => {
             />
           </div>
           <div className={cn(`${CLASS}__product-item`)}>
-            <ProductItem
+            <CatProductItem
               weight="5"
               taste="с курой"
               disabled
