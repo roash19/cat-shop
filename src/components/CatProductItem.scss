@@ -1,0 +1,159 @@
+@import "../stylesheet/colors.scss";
+@import "../stylesheet/mixin.scss";
+
+.product-item {
+  width: 320px;
+  height: 480px;
+  background: linear-gradient(135deg, transparent 30px, $blue 0);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+
+  &--hover {
+    background: linear-gradient(135deg, transparent 30px, $blueHover 0);
+
+    .product-item__weight {
+      background-color: $blueHover;
+    }
+
+    & + .product-item__footer span {
+      color: $blueHover;
+      border-color: $blueHover;
+    }
+  }
+
+  &--disabled {
+    background: linear-gradient(135deg, transparent 30px, $grey 0);
+    pointer-events: none;
+
+    img {
+      opacity: 0.5;
+    }
+
+    p {
+      opacity: 0.5;
+      color: $grey;
+    }
+
+    .product-item__weight {
+      background-color: $grey;
+
+      p {
+        color: $white !important;
+      }
+    }
+
+    & + .product-item__footer {
+      color: $yellow;
+    }
+  }
+
+  &--active {
+    background: linear-gradient(135deg, transparent 30px, $red 0);
+
+    .product-item__weight {
+      background-color: $red;
+    }
+
+    &.product-item--hover {
+      background: linear-gradient(135deg, transparent 30px, $redHover 0);
+
+      .product-item__advertising {
+        color: $redHover;
+      }
+
+      .product-item__weight {
+        background-color: $redHover;
+      }
+    }
+  }
+
+  &__inner {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: 4px;
+    padding: 20px 42px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, transparent 29px, #f2f2f2 0);
+  }
+
+  &__advertising {
+    @include font(16px, #666);
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @include font(48px, $black, 700, 45px);
+  }
+
+  &__taste {
+    @include font(24px, $black, 700);
+    margin: 4px 0 16px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    &-text {
+      @include font(14px, #666, 400, 16px);
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__img {
+    width: 320px;
+    height: 273px;
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+  }
+
+  &__weight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 81px;
+    height: 81px;
+    padding: 10px 0;
+    background-color: $blue;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+    text-align: center;
+
+    &-number {
+      @include font(42px, $white, 400);
+    }
+
+    &-text {
+      @include font(21px, $white, 400);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer {
+    @include font(13px, $white, 400, 16px);
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 0 1px 0 #000000;
+
+    span {
+      color: $blue;
+      font-weight: 700;
+      cursor: pointer;
+      border-bottom: 1px dashed $blue;
+    }
+  }
+}

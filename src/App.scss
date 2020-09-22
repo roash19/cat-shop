@@ -1,0 +1,54 @@
+@import "./stylesheet/colors.scss";
+@import "./stylesheet/mixin.scss";
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("./images/bg.png");
+
+  &__container {
+    max-width: 1120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
+  &__title {
+    font-family: "Exo 2.0-Thin";
+    @include font(36px, $white);
+    margin: 23px 0;
+    text-shadow: 0 1px 0 #000000;
+    text-align: center;
+  }
+
+  &__products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__product-item {
+    margin-bottom: 20px;
+
+    &:nth-child(2) {
+      margin: 0 30px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .app {
+    &__products {
+      justify-content: space-around;
+    }
+  }
+}
