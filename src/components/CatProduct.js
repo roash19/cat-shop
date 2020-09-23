@@ -1,13 +1,13 @@
 import React from "react";
-import "./CatProductItem.scss";
+import "./CatProduct.scss";
 import cn from "classnames";
 import cat from "../images/cat.png";
 import PropsTypes from "prop-types";
 import { pluralize } from "numeralize-ru";
 
-const CLASS = "product-item";
+const CLASS = "cat-product";
 
-const CatProductItem = (props) => {
+const CatProduct = (props) => {
   const [active, setActive] = React.useState(false);
   const [hover, setHover] = React.useState(false);
   const {
@@ -91,9 +91,9 @@ const CatProductItem = (props) => {
   );
 };
 
-export default CatProductItem;
+export default CatProduct;
 
-CatProductItem.PropsTypes = {
+CatProduct.PropsTypes = {
   disabled: PropsTypes.bool,
   weight: PropsTypes.string.isRequired,
   taste: PropsTypes.string.isRequired,

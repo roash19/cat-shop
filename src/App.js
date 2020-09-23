@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import cn from "classnames";
-import CatProductItem from "./components/CatProductItem";
+import CatProduct from "./components/CatProduct";
 
 const CLASS = "app";
 
@@ -12,8 +12,8 @@ const App = () => {
         <h1 className={cn(`${CLASS}__title`)}>Ты сегодня покормил кота?</h1>
 
         <div className={cn(`${CLASS}__products`)}>
-          <div className={cn(`${CLASS}__product-item`)}>
-            <CatProductItem
+          <div className={cn(`${CLASS}__cat-product`)}>
+            <CatProduct
               weight="0,5"
               taste="с фуа-гра"
               composition="Головы щучьи с чесноком да свежайшая сёмгушка."
@@ -21,8 +21,8 @@ const App = () => {
               quantityGifts={1}
             />
           </div>
-          <div className={cn(`${CLASS}__product-item`)}>
-            <CatProductItem
+          <div className={cn(`${CLASS}__cat-product`)}>
+            <CatProduct
               weight="2"
               taste="с рыбой"
               composition="Головы щучьи с чесноком да свежайшая сёмгушка."
@@ -30,8 +30,8 @@ const App = () => {
               quantityGifts={2}
             />
           </div>
-          <div className={cn(`${CLASS}__product-item`)}>
-            <CatProductItem
+          <div className={cn(`${CLASS}__cat-product`)}>
+            <CatProduct
               weight="5"
               taste="с курой"
               disabled

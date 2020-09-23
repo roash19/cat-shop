@@ -1,7 +1,7 @@
 @import "../stylesheet/colors.scss";
 @import "../stylesheet/mixin.scss";
 
-.product-item {
+.cat-product {
   width: 320px;
   height: 480px;
   background: linear-gradient(135deg, transparent 30px, $blue 0);
@@ -12,11 +12,11 @@
   &--hover {
     background: linear-gradient(135deg, transparent 30px, $blueHover 0);
 
-    .product-item__weight {
+    .cat-product__weight {
       background-color: $blueHover;
     }
 
-    & + .product-item__footer span {
+    & + .cat-product__footer span {
       color: $blueHover;
       border-color: $blueHover;
     }
@@ -35,7 +35,7 @@
       color: $grey;
     }
 
-    .product-item__weight {
+    .cat-product__weight {
       background-color: $grey;
 
       p {
@@ -43,7 +43,7 @@
       }
     }
 
-    & + .product-item__footer {
+    & + .cat-product__footer {
       color: $yellow;
     }
   }
@@ -51,18 +51,18 @@
   &--active {
     background: linear-gradient(135deg, transparent 30px, $red 0);
 
-    .product-item__weight {
+    .cat-product__weight {
       background-color: $red;
     }
 
-    &.product-item--hover {
+    &.cat-product--hover {
       background: linear-gradient(135deg, transparent 30px, $redHover 0);
 
-      .product-item__advertising {
+      .cat-product__advertising {
         color: $redHover;
       }
 
-      .product-item__weight {
+      .cat-product__weight {
         background-color: $redHover;
       }
     }
